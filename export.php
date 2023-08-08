@@ -2,6 +2,26 @@
   if(isset($_POST['submit_date_range'])) {
     $first_date = $_POST['first_date'];
     $last_date = $_POST['last_date'];
+    $first_date_string = date_create($first_date);
+    $last_date_string = date_create($last_date);
+  }
+  function tgl_indo($tanggal){
+    $bulan = array (
+      1 =>   'Januari',
+      'Februari',
+      'Maret',
+      'April',
+      'Mei',
+      'Juni',
+      'Juli',
+      'Agustus',
+      'September',
+      'Oktober',
+      'November',
+      'Desember'
+    );
+    $pecahkan = explode('-', $tanggal);
+    return $pecahkan[2] . ' ' . $bulan[ (int)$pecahkan[1] ] . ' ' . $pecahkan[0];
   }
 ?>
 
@@ -36,6 +56,7 @@
   
     <center>
       <h1>DATA LOGBOOK PELAYARAN</h1>
+      <h2><?php echo tgl_indo(date_format($first_date_string, "Y-m-d"));?> - <?php echo tgl_indo(date_format($last_date_string, "Y-m-d"));?></h2>
     </center>
   
     <table border="1">
