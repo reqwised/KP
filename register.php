@@ -17,6 +17,7 @@
 <html>
     <head>
         <title>Register</title>
+        <link rel = "icon" href = "https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" type = "image/x-icon">
         <link rel="stylesheet" href="login.css">
     </head>
 
