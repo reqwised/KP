@@ -125,6 +125,5 @@
             }
         }
     </script>
-    <!--DANIEL RITZ-->
     </body>
 </html>
