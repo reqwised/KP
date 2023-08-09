@@ -5,7 +5,7 @@
 
 <html>
     <head>
-        <title>TAMBAH DATA KAPAL</title>
+        <title>TAMBAH DATA KAPAL YOOOO</title>
     </head>
     
     <body>
