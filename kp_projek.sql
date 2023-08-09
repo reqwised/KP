@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2023 at 08:51 AM
+-- Generation Time: Aug 09, 2023 at 04:11 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -2420,7 +2420,7 @@ CREATE TABLE `traffic` (
 --
 
 INSERT INTO `traffic` (`Traffic_ID`, `ETD`, `ETA`, `Draught`, `Last_port`, `Next_port`, `MMSI`, `input_date`) VALUES
-(23, '2023-08-08 11:42:00', '2023-08-23 11:43:00', 4.5, 'KANYE', 'WEST', 525004014, '2023-08-07 04:16:09'),
+(23, '2023-08-09 08:43:00', '2023-08-31 08:43:00', 4.5, '1 2 3 4 5', 'y o y o y o ', 354511000, '2023-08-07 04:16:09'),
 (24, '2023-08-30 11:17:00', '2023-09-08 11:17:00', 33.4, 'hhh', 'kkkk', 574327000, '2023-08-07 04:17:16');
 
 -- --------------------------------------------------------
