@@ -16,42 +16,54 @@
                 <div class="card-body">
                     <h5 class="card-title fw-bolder mb-3">Tambah Data Logbook</h5>
                     <form action="add.php" method="post" name="form1">
-                        <div class="mb-3"> <!-- NEED ERROR HANDLING -->
-                            <label for="MMSI" class="form-label">MMSI</label>
-                            <div class="col-md-3">
-                                <input id="MMSI" name="MMSI" type="number" list="list_MMSI" class="form-control" onkeyup="GetDetail(this.value)" required>
-                                <datalist id="list_MMSI">
-                                    <?php $result = mysqli_query($mysqli, "SELECT * FROM kapal");
-                                    while($MMSI = mysqli_fetch_array($result)){
-                                        echo "<option>".$MMSI['MMSI']."</option>";
-                                    }?>
-                                </datalist>
+                        <div style="display:flex; align-items:flex-start;">
+                            <div class="mb-3"> <!-- NEED ERROR HANDLING -->
+                                <label for="MMSI" class="form-label">MMSI</label>
+                                <div class="col-md-3">
+                                    <input id="MMSI" name="MMSI" type="number" style="width:320px;" list="list_MMSI" class="form-control" onkeyup="GetDetail(this.value)" required>
+                                    <datalist id="list_MMSI">
+                                        <?php $result = mysqli_query($mysqli, "SELECT * FROM kapal");
+                                        while($MMSI = mysqli_fetch_array($result)){
+                                            echo "<option>".$MMSI['MMSI']."</option>";
+                                        }?>
+                                    </datalist>
+                                </div>
+                            </div>
+
+                            <div style="padding:0px 20px 0px;"></div>
+
+                            <div class="mb-3">
+                                <label for="Nama_kapal" class="form-label">Nama Kapal</label>
+                                <input type="text" readonly class="form-control" id="Nama_kapal" disabled="disabled" style="width:320px ; height:30px" name="Nama_kapal" required>
                             </div>
                         </div>
 
-                        <div class="mb-3">
-                            <label for="Nama_kapal" class="form-label">Nama Kapal</label>
-                            <input type="text" readonly class="form-control" id="Nama_kapal" disabled="disabled" style="width:320px ; height:30px" name="Nama_kapal" required>
+                        <div style="display:flex; align-items:flex-start;">
+                            <div class="mb-3">
+                                <label for="Last_port" class="form-label">Last Port</label>
+                                <input type="text" class="form-control" id="Last_port" name="Last_port" style="width:320px" required>
+                            </div> 
+                            
+                            <div style="padding:0px 20px 0px;"></div>
+
+                            <div class="mb-3">
+                                <label for="Next_port" class="form-label">Next Port</label>
+                                <input type="text" class="form-control" id="Next_port" name="Next_port" style="width:320px" required>
+                            </div> 
                         </div>
 
-                        <div class="mb-3">
-                            <label for="Last_port" class="form-label">Last Port</label>
-                            <input type="text" class="form-control" id="Last_port" name="Last_port" style="width:320px" required>
-                        </div> 
-                        
-                        <div class="mb-3">
-                            <label for="Next_port" class="form-label">Next Port</label>
-                            <input type="text" class="form-control" id="Next_port" name="Next_port" style="width:320px" required>
-                        </div> 
+                        <div style="display:flex; align-items:flex-start;">
+                            <div class="mb-3">
+                                <label for="ETD" class="form-label">ETD</label>
+                                <input type="datetime-local" class="form-control" id="ETD" name="ETD" style="width:320px;" required>
+                            </div>
 
-                        <div class="mb-3">
-                            <label for="ETD" class="form-label">ETD</label>
-                            <input type="datetime-local" class="form-control" id="ETD" name="ETD" style="width:190px" required>
-                        </div>
-                
-                        <div class="mb-3">
-                            <label for="ETA" class="form-label">ETA</label>
-                            <input type="datetime-local" class="form-control" id="ETA" name="ETA" style="width:190px" required>
+                            <div style="padding:0px 20px 0px;"></div>
+                    
+                            <div class="mb-3">
+                                <label for="ETA" class="form-label">ETA</label>
+                                <input type="datetime-local" class="form-control" id="ETA" name="ETA" style="width:320px;" required>
+                            </div>
                         </div>
 
                         <div class="mb-3">
